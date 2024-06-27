@@ -25,6 +25,10 @@ After the dependencies are installed, run the following command to generate a un
 ./vendor/bin/sail artisan key:generate
 ```
 
+The generated key will be stored in the `.env` file.
+
+Please make sure to also furnish the `DB_PASSWORD` in the `.env` file before continuing below.
+
 ## Running Projects
 Run the following command to start the project
 
@@ -33,10 +37,10 @@ Run the following command to start the project
 ```
 
 ### Database Migration
-Run the following command to migrate the database.
+Run the following command to migrate and seed the database.
 
 ```
-./vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan migrate --seed
 ```
 
 ## Interacting with the project
@@ -45,6 +49,12 @@ In your browser, navigate to `localhost` to verify that the server for this proj
 The exposed API can be accessed at the following URL
 
 Product Listing - `localhost/api/products`
+
+The above endpoint accept the following optional query parameters
+- `name`
+- `category`
+- `min_price`
+- `max_price`
 
 ## Testing the project
 While the container is running, run the following command
