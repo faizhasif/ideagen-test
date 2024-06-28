@@ -16,18 +16,16 @@ docker run --rm \
 This will install all PHP dependencies without having PHP binaries installed on your machine
 
 
-## Initializing Projects
+## Initializing Project
 
 ### Project Key
-After the dependencies are installed, run the following command to generate a unique key for the project
+After the dependencies are installed, run the following command to create a new environment variables file for the project.
 
 ```
-./vendor/bin/sail artisan key:generate
+cp .env.example .env
 ```
 
-The generated key will be stored in the `.env` file.
-
-Please make sure to also furnish the `DB_PASSWORD` in the `.env` file before continuing below.
+Please make sure to furnish the `DB_PASSWORD` in the `.env` file before continuing below.
 
 ## Running Projects
 Run the following command to start the project
@@ -35,6 +33,14 @@ Run the following command to start the project
 ```
 ./vendor/bin/sail up -d
 ```
+### Project Key
+Run the following command to furnish a unique key for the project
+
+```
+./vendor/bin/sail artisan key:generate
+```
+
+This will fill up the `APP_KEY` in the `.env` file.
 
 ### Database Migration
 Run the following command to migrate and seed the database.
