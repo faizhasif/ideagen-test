@@ -27,7 +27,7 @@ cp .env.example .env
 
 Please make sure to furnish the `DB_PASSWORD` in the `.env` file before continuing below.
 
-## Running Projects
+## Running Project
 Run the following command to start the project
 
 ```
@@ -49,7 +49,7 @@ Run the following command to migrate and seed the database.
 ./vendor/bin/sail artisan migrate --seed
 ```
 
-## Interacting with the project
+## Interacting with the Project
 In your browser, navigate to `localhost` to verify that the server for this project is up and running correctly.
 
 The exposed API can be accessed at the following URL
@@ -62,13 +62,13 @@ The above endpoint accept the following optional query parameters
 - `min_price`
 - `max_price`
 
-## Testing the project
+## Testing the Project
 While the container is running, run the following command
 ```
 ./vendor/bin/sail artisan test
 ```
 
-## Closing project
+## Closing Project
 Run the following command to close the project
 ```
 ./vendor/bin/sail down
